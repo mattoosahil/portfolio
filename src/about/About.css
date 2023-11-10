@@ -1,0 +1,19 @@
+.aboutImg {
+    /* border: 2px solid black; */
+    height: 70vh;
+    padding: 100px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+.aboutTxt {
+    padding: 100px;
+    color: #43300B;
+    width: 600px; /* Adjust the width and height to create a square */
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Horizontally center the text */
+    line-height: 30px; /* Vertically center the text (adjust the value as needed) */
+    height: 200px; 
+  }

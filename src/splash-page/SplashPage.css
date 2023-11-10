@@ -1,0 +1,19 @@
+.image-container {
+    background-image: url("/src/img/splash-image.png");
+    background-color: rgba(36, 36, 36, 0.493);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    border: 2px solid black;
+    height: 110vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+  .text-container {
+    margin-top: 400px;
+    margin-left: 60px;
+    position: relative;
+    color: white;
+  }
