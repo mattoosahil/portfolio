@@ -1,5 +1,5 @@
  import React from 'react'
- import { Nav, NavMenu, NavBtn, NavLink, NavBtnLink, Bars } from './NavBarStyledComponents'
+ import { Nav, NavMenu, NavBtn, ScrollLinks, NavBtnLink, Bars } from './NavBarStyledComponents'
 
 
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
@@ -9,29 +9,28 @@ export default function Navbar(props) {
     <>
                  <Nav>
                      <Bars />
-     
                      <NavMenu>
-                     <NavLink to="/" >
+                     <ScrollLinks to="home" >
                              Home
-                         </NavLink>
-                         <NavLink to="/about" >
+                         </ScrollLinks>
+                         <ScrollLinks to="about" >
                              About
-                         </NavLink>
-                        <NavLink to="/events" activeStyle>
+                         </ScrollLinks>
+                        <ScrollLinks to="education" activeStyle>
                              Education
-                         </NavLink>
-                         <NavLink to="/annual" activeStyle>
+                         </ScrollLinks>
+                         <ScrollLinks to="/annual" activeStyle>
                              Work Experience
-                         </NavLink>
-                         <NavLink to="/team" activeStyle>
+                         </ScrollLinks>
+                         <ScrollLinks to="team" activeStyle>
                              Projects
-                         </NavLink>
-                         <NavLink to="/blogs" activeStyle>
+                         </ScrollLinks>
+                         <ScrollLinks to="blogs" activeStyle>
                             Contact
-                         </NavLink>
-                         <NavLink to="/sign-up" activeStyle>
+                         </ScrollLinks>
+                         <ScrollLinks to="sign-up" activeStyle>
                              Resume
-                         </NavLink>           
+                         </ScrollLinks>           
                      </NavMenu>
                      {/* <NavBtn>
                          <NavBtnLink to="/signin">

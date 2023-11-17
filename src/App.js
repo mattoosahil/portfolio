@@ -3,7 +3,9 @@ import SplashPage from './splash-page/SplashPage';
 import Navbar from './nav-bar/NavBar';
 import { useRef } from 'react';
  import {  Route, Routes } from 'react-router-dom';
+ import { Element } from 'react-scroll';
 import About from './about/About';
+import Education from './education/Education';
 
 function App() {
   //const ref = useRef(null);
@@ -20,13 +22,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/portfolio" element={<SplashPage />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <Element name="home" id='home'>
+        <SplashPage />
+        </Element>
+        <Element name="about" id='about'>
         <About />
-      </div>
+        </Element>
+        <Element name="education" id='education'>
+        <Education />
+        </Element>
     </>
   );
 }

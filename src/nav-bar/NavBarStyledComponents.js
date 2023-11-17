@@ -25,8 +25,14 @@ export const NavLink = styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    transition: color 0.3s ease; /* Add a transition effect to the color property */
+
+    &:hover {
+        color: #867070; /* Change color on hover */
+    }
     &.active {
         color: #867070;
+        transition: color 0.3s ease;
     }
 `;
  
@@ -88,3 +94,18 @@ export const NavBtnLink = styled(Link)`
         color: #808080;
     }
 `;
+
+export const ScrollLinks = ({ to, children }) => {
+    const handleClick = (e) => {
+      e.preventDefault();
+      const targetElement = document.getElementById(to); // Assuming the target element has an ID matching the route
+      console.log(targetElement);
+      console.log(to);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  
+    return <NavLink to={to} onClick={handleClick}>{children}</NavLink>;
+  };
+  
